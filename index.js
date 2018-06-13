@@ -12,13 +12,22 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res, next) {
-  req.body.result &&
-  req.body.result.parameters &&
-  req.body.result.parameters.name
-  req.body.result.parameters.address
-  req.body.result.parameters.phoneno
+  name='';
+  address='';
+  phoneno='';
+  if (req.body.result.parameters.name){
+    name = req.body.result.parameters.name;
+  
+  }
+  if (req.body.result.parameters.address){
+    address = req.body.result.parameters.address;
+  
+  }
+  if (req.body.result.parameters.phoneno){
+    phoneno = req.body.result.parameters.phoneno;
+  }
   return res.json({
-    speech: "Hi"+ name + "your address" + address + "and your phone no" + phoneno 
+    speech: "Hi"+ name + "your address" + address + "and your phone no" + phoneno
    });
 });
 restService.listen(process.env.PORT || 8000, function() {
