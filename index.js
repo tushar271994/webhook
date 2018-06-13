@@ -17,7 +17,7 @@ restService.post("/echo", function(req, res, next) {
   req.body.result.parameters &&
   req.body.result.parameters.Quantity
   return res.json({
-    speech: "you enter a quantity "+ Quantity
+    speech: "you enter a quantity " + speech 
    });
 });
 restService.listen(process.env.PORT || 8000, function() {
