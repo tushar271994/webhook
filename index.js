@@ -13,8 +13,9 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res, next) {
     var username = req.body.result.parameters.name;
+    var useraddress = req.body.result.parameters.address;
     return res.json({
-    speech: "Hi"+ username 
+    speech: "Hi"+ " "+ username + " " + ", we will deliver at your address" + " "+ address + " " + "shortly" 
    });
 });
 restService.listen(process.env.PORT || 8000, function() {
