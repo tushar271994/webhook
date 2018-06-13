@@ -12,12 +12,13 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res, next) {
-  var speech=
   req.body.result &&
   req.body.result.parameters &&
-  req.body.result.parameters.Quantity
+  req.body.result.parameters.name
+  req.body.result.parameters.address
+  req.body.result.parameters.phoneno
   return res.json({
-    speech: "you enter a quantity " + speech 
+    speech: "Hi"+ name + "your address" + address + "and your phone no" + phoneno 
    });
 });
 restService.listen(process.env.PORT || 8000, function() {
