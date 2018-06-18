@@ -10,17 +10,17 @@ restService.use(
     })
   );
 
-var Pool=require("pg").Pool;
+// var Pool=require("pg").Pool;
 
-var config = {
-  user: 'postgres',
-  database: 'test', 
-  password: 'tushar123', 
-  port: 5433, 
-  host:'localhost'
+// var config = {
+//   user: 'postgres',
+//   database: 'test', 
+//   password: 'tushar123', 
+//   port: 5433, 
+//   host:'localhost'
  
-};
-var  Pool = new Pool(config);
+// };
+// var  Pool = new Pool(config);
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res, next) {
