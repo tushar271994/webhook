@@ -31,7 +31,7 @@ restService.post("/pizzabot", function(req, res, next) {
         if (err) {
           return next(err)
         }
-        client.query('insert into pizzaorder(name,address)  values($1, $2)',
+        client.query('insert into demo(name,address)  values($1, $2)',
         [username, useraddress], function (err, result) {
           done() 
          if (err) {
