@@ -27,19 +27,19 @@ restService.post("/echo", function(req, res, next) {
     var username = req.body.name;
     var useraddress = req.body.address;
 
-    Pool.connect(function(err, client, done) {
-        if (err) {
-          return next(err)
-        }
-        client.query('insert into demo(name,address)  values($1, $2)',
-        [username, useraddress], function (err, result) {
-          done() 
-         if (err) {
-            return next(err)
-          }
-         res.status(200);
-        })
-      })
+    // Pool.connect(function(err, client, done) {
+    //     if (err) {
+    //       return next(err)
+    //     }
+    //     client.query('insert into demo(name,address)  values($1, $2)',
+    //     [username, useraddress], function (err, result) {
+    //       done() 
+    //      if (err) {
+    //         return next(err)
+    //       }
+    //      res.status(200);
+    //     })
+    //   })
       return res.json({
       speech: "Hi"+ " "+ username + " " + ", we will deliver at your address" + " "+ useraddress + " " + "shortly" 
       });
