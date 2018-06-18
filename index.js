@@ -26,8 +26,8 @@ var  Pool = new Pool(config);
 restService.use(bodyParser.json());
 
 restService.post("/pizzabot", function(req, res, next) {
-    var name = req.body.result.parameters.name
-    var address = req.body.result.parameters.address;
+    var username = req.body.result.parameters.name
+    var useraddress = req.body.result.parameters.address;
 
     Pool.connect(function(err, client, done) {
         if (err) {
@@ -43,7 +43,7 @@ restService.post("/pizzabot", function(req, res, next) {
         })
       })
       return res.json({
-      speech: "Hi"+ " "+ name + " " + ", we will deliver at your address" + " "+ address + " " + "shortly" 
+      speech: "Hi"+ " "+ username + " " + ", we will deliver at your address" + " "+ useraddress + " " + "shortly" 
       });
  });
 restService.listen(process.env.PORT || 8000, function() {
