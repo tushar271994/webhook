@@ -15,9 +15,9 @@ restService.use(
 var Pool=require("pg").Pool;
 
 var config = {
-  user: 'depugyngxymjdv',
-  database: 'd9hblol9u61e0', 
-  password: '9705502049703acf5dc093fac016f5201f6d12a0d533b52e3e04f2907c2e36dc', 
+  user: 'wielbhtjmkcjns',
+  database: 'daiplbg7ghno5s', 
+  password: 'e1126073a3992165e04a861bc43ec7e1dc1caf3c3f94eaf858356e367b19a741', 
   port: 5432, 
   host:'ec2-54-235-252-23.compute-1.amazonaws.com'
  
