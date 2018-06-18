@@ -24,8 +24,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res, next) {
-    var username = req.body.name;
-    var useraddress = req.body.address;
+    var name = req.body.name;
+    var address = req.body.address;
 
     // Pool.connect(function(err, client, done) {
     //     if (err) {
@@ -41,7 +41,7 @@ restService.post("/echo", function(req, res, next) {
     //     })
     //   })
       return res.json({
-      speech: "Hi"+ " "+ username + " " + ", we will deliver at your address" + " "+ useraddress + " " + "shortly" 
+      speech: "Hi"+ " "+ name + " " + ", we will deliver at your address" + " "+ address + " " + "shortly" 
       });
  });
 restService.listen(process.env.PORT || 8000, function() {
